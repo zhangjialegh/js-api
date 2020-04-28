@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button>location</button>
+  <button>download</button>
+  <img src="" alt="" srcset="">
+  <video src="" id="myVideo" height="500"></video>
+  <script src="./dist/jsa.min.js" type="module"></script>
+</body>
+<script type="module">
+const btn = document.getElementsByTagName('button')[0]
+const btn1 = document.getElementsByTagName('button')[1]
+const img = document.getElementsByTagName('img')[0]
+const vdo = document.getElementById('myVideo')
+const {jsa} = window.jsa
+btn.onclick = function () {
+  jsa.getLocation({
+    altitude: true,
+    complete (res) {
+      console.log(res, 'res')
+    }
+  })
+}
+btn1.onclick = function () {
+  jsa.getImageInfo({
+    src: 'https://img2018.cnblogs.com/blog/1074906/201910/1074906-20191005165248678-125644123.jpg',
+    complete(res) {
+      console.log(res, 'down')
+    }
+  })
+}
+</script>
+</html>

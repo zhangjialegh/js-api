@@ -1,0 +1,32 @@
+{
+  "name": "js-api",
+  "version": "0.0.1",
+  "description": "A project of js-api",
+  "main": "dist/jsa.min.js",
+  "scripts": {
+    "test": "jest test/test-bus.js",
+    "build": "webpack --optimize-minimize --config webpack.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js"
+  },
+  "author": "zhangjialegh <zjl1195185765@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/runtime": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "exif-js": "^2.3.0",
+    "safe-area-insets": "^1.4.1"
+  }
+}
